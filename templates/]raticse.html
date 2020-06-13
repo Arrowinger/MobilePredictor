@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hello</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='indexstyle.css') }}">
+</head>
+<body>
+<h1>welcome kumar pratyush</h1>
+<p>product name :  {{title}}</p><br>
+<p>product price : {{price}}</p>
+<br>
+<p>description</p><br>
+<p>{{description}}</p>
+<br>
+    <table>
+    <tr>
+        <th>reviews</th>
+    </tr>
+    {% for item in li %}
+    <tr>
+        <td>{{item}}</td>
+    </tr>
+    {% endfor %}
+</table>
+<p>
+    <img src="{{image}}" alt="not found">
+</p>
+</body>
+</html>
